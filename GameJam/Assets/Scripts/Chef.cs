@@ -81,9 +81,14 @@ public class Chef : MonoBehaviour
         StartCoroutine(Turn(true));
     }
 
-    void LookAway()
+    bool getIsTurning()
     {
-        
+        return isTurning;
+    }
+
+    bool getIsLooking()
+    {
+        return isLooking;
     }
 
 }
