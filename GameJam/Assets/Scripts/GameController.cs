@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    private float AvgSecondsDelay = 30;
+    private GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         
     }
 
@@ -15,4 +19,11 @@ public class GameController : MonoBehaviour
     {
         
     }
-}
+
+            
+           
+
+    
+ }
+
+
