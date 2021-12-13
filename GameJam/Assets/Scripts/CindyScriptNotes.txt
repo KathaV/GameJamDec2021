@@ -1,0 +1,3 @@
+- Player need to be tagged
+- Player and platform need to have box colliders 2D
+- Player needs to have rigidbody2D
