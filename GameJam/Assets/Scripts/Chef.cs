@@ -11,12 +11,16 @@ public class Chef : MonoBehaviour
     private bool isLooking = false;
     private bool isTurning = false;
     private SpriteRenderer sprite;
+    private GameObject player;
+    private Hideable playerHideScript;
     // Start is called before the first frame update
     void Start()
     {
 
         sprite = GetComponent<SpriteRenderer>();
         StartCoroutine(LookAway());
+        player = GameObject.FindWithTag("Player");
+        playerHideScript = player.GetComponent<Hideable>();
     }
 
 
@@ -92,14 +96,25 @@ public class Chef : MonoBehaviour
         float randomOff = Random.Range(-offset, offset);
         Debug.Log("random offset " + randomOff);
 
-        // Calculate delay to include offset, then wait
         float timeDelay = LookDelay + randomOff;
         Debug.Log("Looking at " + Time.realtimeSinceStartup + " for " + timeDelay);
-        yield return new WaitForSeconds(timeDelay);
+
+        // Look for player if visible.
+        if (!playerHideScript.getHidden())
+        {
+            Debug.Log("Chef has seen player!");
+            //TODO: Add gameover and other actions upon detection
+            yield break;
+        }
+        else
+        {
+            yield return new WaitForSeconds(timeDelay);
+        }
 
         //Look away
         StartCoroutine(Turn(true));
     }
+
 
     bool getIsTurning()
     {
