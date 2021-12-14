@@ -1,3 +1,15 @@
+**Player**
 - Player need to be tagged
 - Player and platform need to have box colliders 2D
 - Player needs to have rigidbody2D
+
+**Camera**
+- Main camera
+    * Add cinemachine brain
+- Background
+    * Add polygon collider as a component to the background
+    * Tick `isTrigger` under polygon collider
+- Cinemachine 2D should be added in the Scene
+    * Assign Player to Cinemachine2D under 'Follow'
+    * Add extension Confine2D in Cinemachine2D
+    * Add the polygon (background) collider in Confine2D
