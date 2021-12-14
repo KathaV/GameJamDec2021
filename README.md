@@ -12,6 +12,7 @@ For help with the format you can find a guide [here](https://docs.github.com/en/
 - [x] Movement
 - [x] Chef states
 - [x] Chef Detection
+
 **For Completion:**
 - [ ] Incorporate Graphics (chef, potato, shelves/floor, items to hide behind)
 - [ ] Animation
@@ -19,6 +20,7 @@ For help with the format you can find a guide [here](https://docs.github.com/en/
 - [ ] Introductory story?
 - [ ] Tutorial stage/instructions
 - [ ] GameOver/GameStart/Pause UI
+
 **Additional Mechanics:**
 - [ ] Extra power ups
 - [ ] Enemies
