@@ -30,7 +30,7 @@ For help with the format you can find a guide [here](https://docs.github.com/en/
 * [Explanation of the game](#explanation-of-the-game)
 * [User Interface](#user-interface)
 * [Modelling Objects and Entities](#modelling-objects-and-entities)
-* [Mechanics/Physics of Objects and Entities](#mechanics/physics-of-objects-and-entities)
+* [Mechanics/Physics of Objects and Entities](#mechanicsphysics-of-objects-and-entities)
 * [Movement and Camera](#movement-and-camera)
 
 ## Team Members
