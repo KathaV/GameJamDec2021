@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - HidingPlace
   - Background
-  - Platform
   layers:
   - Default
   - TransparentFX
@@ -41,8 +41,11 @@ TagManager:
   - 
   m_SortingLayers:
   - name: BG
-    uniqueID: 3820515301
+    uniqueID: 3901494721
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3820515301
     locked: 0
