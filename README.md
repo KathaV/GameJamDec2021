@@ -1,13 +1,10 @@
 # GameJamDec2021
-As titled, [Design Jam: GameJam](https://itch.io/jam/design-buddies-game-jam-2021) 2021 December form 11th to 17th
+As titled, [Design Jam: GameJam](https://itch.io/jam/design-buddies-game-jam-2021) 2021 December from `11th to 17th`
 
 Final Electronic Submission (project): **6:59PM, 17th December**
 
 # Project-2 README
-
-You must modify this `README.md` that describes your application, specifically what it does, how to use it, and how you evaluated and improved it.
-
-Remember that _"this document"_ should be `well written` and formatted **appropriately**. This is just an example of different formating tools available for you. For help with the format you can find a guide [here](https://docs.github.com/en/github/writing-on-github).
+For help with the format you can find a guide [here](https://docs.github.com/en/github/writing-on-github).
 
 
 **To do:**
@@ -32,6 +29,7 @@ Additional Mechanics:
 * [Explanation of the game](#explanation-of-the-game)
 * [User Interface](#user-interface)
 * [Modelling Objects and Entities](#modelling-objects-and-entities)
+* [Mechanics/Physics of Objects and Entities](#mechanics/physics-of-objects-and-entities)
 * [Movement and Camera](#movement-and-camera)
 
 ## Team Members
@@ -58,6 +56,23 @@ Will be drawn by Sonia
     * **Green** - not looking for player/looking away
     * **Yellow** - turning towards/away from player. Potentially, can be a vulnerable stage which player movement can attract looking?
     * **Red** - Danger/Looking. If player is found like this, gameover or whatever
+
+# Mechanics/Physics of Objects and Entities
+
+## Player
+Potato which user can control.
+**Requirements**:
+* Must be tagged `Player`
+* Must include Movement and Hideable Scripts
+* Must include RigidBody and 2D Collider
+
+## Hideable Objects
+Objects which player can hide behind when Chef is looking and avoid detection.
+**Requirements**:
+* 2D Collider attached, IsTrigger enabled. Collider should be resized to smaller than actual size, such that a player must be well behind the object before the collider space is triggered.
+* Must be tagged `HidingPlace`
+* Player requirements satisfied
+
 
 # Movement and Camera
 As developed by Cindy:
