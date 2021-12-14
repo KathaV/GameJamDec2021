@@ -26,8 +26,7 @@ public class CheckDetection : MonoBehaviour
         {
             Debug.Log("Player hidden");
             hideable = other.gameObject.GetComponent<Hideable>();
-            hideable.setHidden(true);        
-            
+            hideable.setHidden(true);
         }
     }
 
