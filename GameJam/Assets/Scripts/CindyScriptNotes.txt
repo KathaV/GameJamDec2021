@@ -6,10 +6,17 @@
 **Camera**
 - Main camera
     * Add cinemachine brain
-- Background
+- LevelBorder (Transparent square/polygon)
     * Add polygon collider as a component to the background
     * Tick `isTrigger` under polygon collider
 - Cinemachine 2D should be added in the Scene
     * Assign Player to Cinemachine2D under 'Follow'
     * Add extension Confine2D in Cinemachine2D
     * Add the polygon (background) collider in Confine2D
+Note: Sometimes might look a bit janky due to Confine2D.
+Solution:
+    = Adjust ortho lens size in 2D camera
+    = Adjust jumpSpeed to avoid player jumping above half the background
+
+**Parallax Effect (Optional)**
+- Works best with multiplier < 1
