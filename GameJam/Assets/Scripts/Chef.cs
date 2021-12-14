@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chef : MonoBehaviour
 {
-    private float AvgSecondsDelay = 3;
+    private float idleDelay = 3;
 
     private float LookDelay = 5;
     private float TurnDelay = 3;
@@ -13,6 +13,7 @@ public class Chef : MonoBehaviour
     private SpriteRenderer sprite;
     private GameObject player;
     private Hideable playerHideScript;
+    public GameObject gameOverText;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class Chef : MonoBehaviour
         StartCoroutine(LookAway());
         player = GameObject.FindWithTag("Player");
         playerHideScript = player.GetComponent<Hideable>();
+        gameOverText.gameObject.SetActive(false);
     }
 
 
@@ -41,11 +43,11 @@ public class Chef : MonoBehaviour
 
 
         // random offset to change duration slightly
-        float offset = AvgSecondsDelay / 3;
+        float offset = idleDelay / 3;
         Debug.Log(offset);
 
         // Calculate delay to include offset, then wait
-        float timeDelay = AvgSecondsDelay + Random.Range(-offset, offset);
+        float timeDelay = idleDelay + Random.Range(-offset, offset);
         yield return new WaitForSeconds(timeDelay);
 
         //Begin to turn towards player
@@ -96,19 +98,27 @@ public class Chef : MonoBehaviour
         float randomOff = Random.Range(-offset, offset);
         Debug.Log("random offset " + randomOff);
 
-        float timeDelay = LookDelay + randomOff;
-        Debug.Log("Looking at " + Time.realtimeSinceStartup + " for " + timeDelay);
+        float Timer = LookDelay + randomOff;
+        Debug.Log("Looking at " + Time.realtimeSinceStartup + " for " + Timer);
 
         // Look for player if visible.
-        if (!playerHideScript.getHidden())
+
+        while (Timer > 0)
         {
-            Debug.Log("Chef has seen player!");
-            //TODO: Add gameover and other actions upon detection
-            yield break;
-        }
-        else
-        {
-            yield return new WaitForSeconds(timeDelay);
+            if (!playerHideScript.getHidden())
+            {
+                Debug.Log("Chef has seen player!");
+                //TODO: Add gameover and other actions upon detection
+                
+                gameOverText.gameObject.SetActive(true);
+                yield break;
+            }
+            else
+            {
+                //Debug.Log("Chef can't see player!");
+                yield return null;
+            }
+            Timer -= Time.deltaTime;
         }
 
         //Look away
