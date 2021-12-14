@@ -3,24 +3,23 @@ As titled, [Design Jam: GameJam](https://itch.io/jam/design-buddies-game-jam-202
 
 Final Electronic Submission (project): **6:59PM, 17th December**
 
-# Project-2 README
 For help with the format you can find a guide [here](https://docs.github.com/en/github/writing-on-github).
 
 
-**To do:**
-Basic Mechanics:
+# To-Do List:
+**Basic Mechanics:**
 - [x] Camera Motion
 - [x] Movement
 - [x] Chef states
 - [x] Chef Detection
-For Completion:
+**For Completion:**
 - [ ] Incorporate Graphics (chef, potato, shelves/floor, items to hide behind)
 - [ ] Animation
 - [ ] Incroporate Music and Audio
 - [ ] Introductory story?
 - [ ] Tutorial stage/instructions
 - [ ] GameOver/GameStart/Pause UI
-Additional Mechanics:
+**Additional Mechanics:**
 - [ ] Extra power ups
 - [ ] Enemies
 
