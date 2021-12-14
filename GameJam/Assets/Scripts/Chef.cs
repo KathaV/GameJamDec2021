@@ -86,6 +86,7 @@ public class Chef : MonoBehaviour
 
     IEnumerator Look()
     {
+        
         // Set appropriate variables
         isLooking = true;
         isTurning = false;
@@ -101,20 +102,21 @@ public class Chef : MonoBehaviour
         float Timer = LookDelay + randomOff;
         Debug.Log("Looking at " + Time.realtimeSinceStartup + " for " + Timer);
 
-        // Look for player if visible.
-
+        // Look for player if visible for duration of Timer
         while (Timer > 0)
         {
+            //if player is not hidden, chef stops its turning animation and displays gameover text
             if (!playerHideScript.getHidden())
             {
                 Debug.Log("Chef has seen player!");
-                //TODO: Add gameover and other actions upon detection
-                
+                //TODO: Add other actions upon detection here
                 gameOverText.gameObject.SetActive(true);
+                //Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
                 yield break;
             }
             else
             {
+                // else continue looking
                 //Debug.Log("Chef can't see player!");
                 yield return null;
             }
