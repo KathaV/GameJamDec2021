@@ -19,7 +19,7 @@ public class CheckDetection : MonoBehaviour
     }
 
     // based/sourced from: https://answers.unity.com/questions/942561/percentage-of-collider-within-a-trigger-area-c.html
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Entered!");
         if (other.tag=="Player")
@@ -30,7 +30,7 @@ public class CheckDetection : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         Debug.Log("Staying!");
         if (other.tag == "Player")
@@ -42,7 +42,7 @@ public class CheckDetection : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
