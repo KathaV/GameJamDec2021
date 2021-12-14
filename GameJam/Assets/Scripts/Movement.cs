@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
         // default values
         rb.gravityScale = 15f;
         playerSpeed = 5f;
-        jumpSpeed = 40f;
+        jumpSpeed = 30f;
     }
 
     // Update is called once per frame
