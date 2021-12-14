@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KathaScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 2dbba9aeb9798f44482a7b7506fc6ae9
+  - enabled: 1
+    path: Assets/Scenes/CindyScene.unity
+    guid: 192991374d683bf45a38a30a43d40c46
   m_configObjects: {}
