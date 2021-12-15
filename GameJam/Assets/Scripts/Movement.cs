@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     public float playerSpeed = 5f;
     public float jumpSpeed = 30f;
     private bool isJump = false;
-    public AudioSource jumpSFX;
+    //public AudioSource jumpSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
         {   
             rb.velocity = Vector2.up * jumpSpeed;
             isJump = true;
-            jumpSFX.Play();
+            //jumpSFX.Play();
         }
     }
 

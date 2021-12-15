@@ -18,5 +18,18 @@ Solution:
     = Adjust ortho lens size in 2D camera
     = Adjust jumpSpeed to avoid player jumping above half the background
 
+**Level Up Mechanics**
+- Add the portal/door to the next Level
+- Add a suitable collider to the door and tick 'isTrigger'
+
+**Main Menu UI**
+- Has to be placed at index 0 in build settings
+
+**Pause Menu UI**
+- Add PauseUI and deactivate it
+- Need to create EventSystem
+- Add PauseMenu script to EventSystem
+- Drag PauseUI object to the EventSystem script variable `PauseUI`
+
 **Parallax Effect (Optional)**
 - Works best with multiplier < 1
