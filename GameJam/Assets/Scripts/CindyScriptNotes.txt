@@ -3,6 +3,10 @@
 - Player and platform need to have box colliders 2D
 - Player needs to have rigidbody2D
 
+**Chef Animation**
+- Add ChefAnimator to Chef
+- Add the animator to the Chef script
+
 **Camera**
 - Main camera
     * Add cinemachine brain
