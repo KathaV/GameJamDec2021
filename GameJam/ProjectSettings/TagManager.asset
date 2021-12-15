@@ -8,6 +8,7 @@ TagManager:
   - Background
   - Platform
   - Chef
+  - Fragment
   layers:
   - Default
   - TransparentFX

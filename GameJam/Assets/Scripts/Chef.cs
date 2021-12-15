@@ -39,12 +39,12 @@ public class Chef : MonoBehaviour
         isLooking = false;
         // set green colour (temporary visual cue for chef state change)
         sprite.color = new Color(0, 1, 0, 1);
-        Debug.Log("Starting at" + Time.realtimeSinceStartup);
+        //Debug.Log("Starting at" + Time.realtimeSinceStartup);
 
 
         // random offset to change duration slightly
         float offset = idleDelay / 3;
-        Debug.Log(offset);
+        //Debug.Log(offset);
 
         // Calculate delay to include offset, then wait
         float timeDelay = idleDelay + Random.Range(-offset, offset);
@@ -63,13 +63,13 @@ public class Chef : MonoBehaviour
 
         // random offset to change duration slightly
         float offset = TurnDelay / 3;
-        Debug.Log(offset);
+        //Debug.Log(offset);
         float randomOff = Random.Range(-offset, offset);
-        Debug.Log("random offset " + randomOff);
+        //Debug.Log("random offset " + randomOff);
 
         // Calculate delay to include offset, then wait
         float timeDelay = TurnDelay + randomOff;
-        Debug.Log("Turning at " + Time.realtimeSinceStartup + " for " + timeDelay);
+        //Debug.Log("Turning at " + Time.realtimeSinceStartup + " for " + timeDelay);
         yield return new WaitForSeconds(timeDelay);
 
         // Depending on if turning towards or away from player, do appropriate action
@@ -97,10 +97,10 @@ public class Chef : MonoBehaviour
         // random offset to change duration slightly
         float offset = LookDelay / 3;
         float randomOff = Random.Range(-offset, offset);
-        Debug.Log("random offset " + randomOff);
+        //Debug.Log("random offset " + randomOff);
 
         float Timer = LookDelay + randomOff;
-        Debug.Log("Looking at " + Time.realtimeSinceStartup + " for " + Timer);
+        //Debug.Log("Looking at " + Time.realtimeSinceStartup + " for " + Timer);
 
         // Look for player if visible for duration of Timer
         while (Timer > 0)
@@ -108,7 +108,7 @@ public class Chef : MonoBehaviour
             //if player is not hidden, chef stops its turning animation and displays gameover text
             if (!playerHideScript.getHidden())
             {
-                Debug.Log("Chef has seen player!");
+                //Debug.Log("Chef has seen player!");
                 //TODO: Add other actions upon detection here
                 gameOverText.gameObject.SetActive(true);
                 //Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
