@@ -5,7 +5,6 @@ using UnityEngine;
 public class CheckDetection : MonoBehaviour
 {
     private GameObject player;
-    private Hideable hideable;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,34 +20,34 @@ public class CheckDetection : MonoBehaviour
     // based/sourced from: https://answers.unity.com/questions/942561/percentage-of-collider-within-a-trigger-area-c.html
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Entered!");
+        //Debug.Log("Entered!");
         if (other.tag=="Player")
         {
             Debug.Log("Player hidden");
-            hideable = other.gameObject.GetComponent<Hideable>();
-            hideable.setHidden(true);
+            other.gameObject.GetComponent<Hideable>().setHidden(true);
+            
         }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("Staying!");
+        //Debug.Log("Staying!");
         if (other.tag == "Player")
         {
-            Debug.Log("Player hidden");
-            hideable = other.gameObject.GetComponent<Hideable>();
-            hideable.setHidden(true);
+            //Debug.Log("Player hidden");
+            other.gameObject.GetComponent<Hideable>().setHidden(true); 
+            
 
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        //if (other.tag == "Player")
         {
             Debug.Log("Player no longer hidden");
-            hideable = other.gameObject.GetComponent<Hideable>();
-            hideable.setHidden(false);
+            other.gameObject.GetComponent<Hideable>().setHidden(false);
+            
 
         }
     }
