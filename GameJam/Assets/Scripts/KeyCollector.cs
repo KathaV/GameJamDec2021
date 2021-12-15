@@ -36,7 +36,7 @@ public class KeyCollector : MonoBehaviour
 
     }
 
-    void isFinished()
+    public bool isFinished()
     {
         return finished;
     }
