@@ -6,6 +6,8 @@ TagManager:
   tags:
   - HidingPlace
   - Background
+  - Platform
+  - Chef
   layers:
   - Default
   - TransparentFX
@@ -42,6 +44,12 @@ TagManager:
   m_SortingLayers:
   - name: BG
     uniqueID: 3901494721
+    locked: 0
+  - name: Chef
+    uniqueID: 1808055103
+    locked: 0
+  - name: Platforms
+    uniqueID: 959302869
     locked: 0
   - name: Default
     uniqueID: 0
