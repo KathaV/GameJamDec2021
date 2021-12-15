@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Chef : MonoBehaviour
 {
+    public Animator animator;
     private float idleDelay = 3;
 
     private float LookDelay = 5;
@@ -44,6 +45,7 @@ public class Chef : MonoBehaviour
         isLooking = false;
         // set green colour (temporary visual cue for chef state change)
         sprite.color = new Color(0, 1, 0, 1);
+        animator.SetBool("isTurning", isTurning);
         //Debug.Log("Starting at" + Time.realtimeSinceStartup);
 
 
@@ -63,6 +65,7 @@ public class Chef : MonoBehaviour
     {
         isTurning = true;
         isLooking = false;
+        animator.SetBool("isTurning", isTurning);
         // set yellow colour (temporary visual cue for chef state change)
         sprite.color = new Color(1, 1, 0, 1);
 
@@ -98,6 +101,7 @@ public class Chef : MonoBehaviour
         isLooking = true;
         isTurning = false;
 
+        animator.SetBool("isLooking", isLooking);
         // set red colour (temporary visual cue for chef state change)
         sprite.color = new Color(1, 0, 0, 1);
 
@@ -119,6 +123,7 @@ public class Chef : MonoBehaviour
                 DetectedSFX.Play();
                 //TODO: Add other actions upon detection here
                 gameOverText.gameObject.SetActive(true);
+                animator.SetBool("isFound", true);
                 //Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
                 yield break;
             }
