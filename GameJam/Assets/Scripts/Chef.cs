@@ -13,6 +13,11 @@ public class Chef : MonoBehaviour
     private SpriteRenderer sprite;
     private GameObject player;
     private Hideable playerHideScript;
+
+    public AudioSource LookAlertSFX;
+    public AudioSource DetectedSFX;
+
+    //for testing only--TO DELETE!!!
     public GameObject gameOverText;
     // Start is called before the first frame update
     void Start()
@@ -74,7 +79,9 @@ public class Chef : MonoBehaviour
 
         // Depending on if turning towards or away from player, do appropriate action
         if (!lookingAway) {
-
+            LookAlertSFX.Play();
+            //delay before looking
+            yield return new WaitForSeconds(LookAlertSFX.clip.length-0.15f);
             StartCoroutine(Look());
         }
         else
@@ -109,6 +116,7 @@ public class Chef : MonoBehaviour
             if (!playerHideScript.getHidden())
             {
                 //Debug.Log("Chef has seen player!");
+                DetectedSFX.Play();
                 //TODO: Add other actions upon detection here
                 gameOverText.gameObject.SetActive(true);
                 //Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
