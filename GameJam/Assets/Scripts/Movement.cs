@@ -6,9 +6,10 @@ public class Movement : MonoBehaviour
 {
     private GameObject player;
     private Rigidbody2D rb;
-    public float playerSpeed;
-    public float jumpSpeed;
+    public float playerSpeed = 5f;
+    public float jumpSpeed = 30f;
     private bool isJump = false;
+    public AudioSource jumpSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,8 @@ public class Movement : MonoBehaviour
         rb = transform.GetComponent<Rigidbody2D>();
         // default values
         rb.gravityScale = 15f;
-        playerSpeed = 5f;
-        jumpSpeed = 30f;
+
+        
     }
 
     // Update is called once per frame
@@ -39,6 +40,7 @@ public class Movement : MonoBehaviour
         {   
             rb.velocity = Vector2.up * jumpSpeed;
             isJump = true;
+            jumpSFX.Play();
         }
     }
 
@@ -56,4 +58,5 @@ public class Movement : MonoBehaviour
             }
         }
     }
+
 }
