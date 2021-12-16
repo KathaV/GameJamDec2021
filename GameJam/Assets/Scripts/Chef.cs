@@ -5,10 +5,10 @@ using UnityEngine;
 public class Chef : MonoBehaviour
 {
     public Animator animator;
-    private float idleDelay = 3;
+    private float idleDelay = 1;
 
-    private float LookDelay = 5;
-    private float TurnDelay = 3;
+    private float LookDelay = 1;
+    private float TurnDelay = 1;
     private bool isLooking = false;
     private bool isTurning = false;
     private SpriteRenderer sprite;
@@ -19,7 +19,7 @@ public class Chef : MonoBehaviour
     public AudioSource DetectedSFX;
 
     //for testing only--TO DELETE!!!
-    public GameObject gameOverText;
+    //public GameObject gameOverText;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +28,7 @@ public class Chef : MonoBehaviour
         StartCoroutine(LookAway());
         player = GameObject.FindWithTag("Player");
         playerHideScript = player.GetComponent<Hideable>();
-        gameOverText.gameObject.SetActive(false);
+        //gameOverText.gameObject.SetActive(false);
     }
 
 
@@ -65,6 +65,8 @@ public class Chef : MonoBehaviour
     {
         isTurning = true;
         isLooking = false;
+        
+        animator.SetBool("isLooking", isLooking);
         animator.SetBool("isTurning", isTurning);
         // set yellow colour (temporary visual cue for chef state change)
         sprite.color = new Color(1, 1, 0, 1);
@@ -122,7 +124,7 @@ public class Chef : MonoBehaviour
                 //Debug.Log("Chef has seen player!");
                 DetectedSFX.Play();
                 //TODO: Add other actions upon detection here
-                gameOverText.gameObject.SetActive(true);
+                //gameOverText.gameObject.SetActive(true);
                 animator.SetBool("isFound", true);
                 //Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
                 yield break;
