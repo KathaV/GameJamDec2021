@@ -134,7 +134,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 555b67b68440a394f85cc7a13d3fd4ff, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 04acc960204dabe4da1778f1c068d7ee, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -232,8 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b99d8eede92234fbabeed4b137053a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awakeTrack: {fileID: 0}
-  switchTrack: {fileID: 0}
+  awakeTrack: {fileID: 5186757692376866906}
+  switchTrack: {fileID: -2487476117631248268}
   fadeTime: 0.1
 --- !u!114 &-2487476117631248268
 MonoBehaviour:
@@ -247,9 +247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca353a3235db4da4ca9d4c2962c08e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopPart: {fileID: 0}
-  introPart: {fileID: 0}
-  trackName: 
+  loopPart: {fileID: 2545947594877153535}
+  introPart: {fileID: 8300000, guid: 10e35dc710e2eeb46bf17dd9444d37e6, type: 3}
+  trackName: Detecting
 --- !u!114 &5186757692376866906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca353a3235db4da4ca9d4c2962c08e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopPart: {fileID: 0}
+  loopPart: {fileID: 6553626724659547737}
   introPart: {fileID: 8300000, guid: 52657ec68c8eda8429682c6b4583e06a, type: 3}
   trackName: Detecting
 --- !u!82 &6553626724659547737
