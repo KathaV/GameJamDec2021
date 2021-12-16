@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5564b34f087740745a6027dc9b583119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyTxt: {fileID: 0}
+  keyTxt: {fileID: 304373560920874831, guid: c851fde73ff69524cba6a3e1b6ed34fd, type: 3}
 --- !u!82 &5595495664729428245
 AudioSource:
   m_ObjectHideFlags: 0

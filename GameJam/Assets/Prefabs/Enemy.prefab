@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6901850826184044022}
   - component: {fileID: 6901850826184044018}
   - component: {fileID: 6901850826184044029}
+  - component: {fileID: 7368716203182421931}
   m_Layer: 0
   m_Name: rat1
   m_TagString: Untagged
@@ -151,7 +152,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 9.264904, y: -0.370008}
@@ -197,6 +198,22 @@ MonoBehaviour:
   speed: 3
   idleDuration: 2
   anim: {fileID: 0}
+--- !u!70 &7368716203182421931
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901850826184044023}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.3335711, y: -0.6558499}
+  m_Size: {x: 11.726291, y: 6.6115303}
+  m_Direction: 1
 --- !u!1 &6901850826615726034
 GameObject:
   m_ObjectHideFlags: 0

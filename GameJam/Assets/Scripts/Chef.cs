@@ -5,10 +5,10 @@ using UnityEngine;
 public class Chef : MonoBehaviour
 {
     public Animator animator;
-    private float idleDelay = 8;
+    public float idleDelay = 8;
 
-    private float LookDelay = 4;
-    private float TurnDelay = 3;
+    public float LookDelay = 4;
+    public float TurnDelay = 3;
     private bool isLooking = false;
     private bool isTurning = false;
     private SpriteRenderer sprite;
