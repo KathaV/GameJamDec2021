@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class KeyCollector : MonoBehaviour
 {
@@ -9,13 +10,15 @@ public class KeyCollector : MonoBehaviour
     private int fragTotal = 0;
     private GameObject[] fragList;
     private bool finished = false;
+    public GameObject keyTxt;
+    private GameObject msgController;
 
     // Start is called before the first frame update
     void Start()
     {
         fragList = GameObject.FindGameObjectsWithTag("Fragment");
         fragTotal = fragList.Length;
-        
+        msgController = GameObject.FindGameObjectWithTag("MessageController");
 
     }
 
@@ -25,12 +28,12 @@ public class KeyCollector : MonoBehaviour
         {
             fragCount++;
             Debug.Log("Fragment found! Frag#" + fragCount+"\n"+(fragTotal-fragCount)+" more to go!");
-
+            keyTxt.GetComponent<TextMeshProUGUI>().text = "" + fragCount + "/" + fragTotal;
             other.gameObject.GetComponent<Collectible>().collect();
             if (fragCount==fragTotal)
             {
-
                 finished = true;
+                msgController.GetComponent<MessageController>().broadcast("You've collected all the keys! Find and open the door to escape...");
             }
         }
 
@@ -39,6 +42,20 @@ public class KeyCollector : MonoBehaviour
     public bool isFinished()
     {
         return finished;
+    }
+
+    public int getRemaining()
+    {
+        return fragTotal - fragCount;
+    }
+
+    public int getCount()
+    {
+        return fragCount;
+    }
+    public int getTotal()
+    {
+        return fragTotal;
     }
 
 }
