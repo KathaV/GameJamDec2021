@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4936053696153722601}
   - component: {fileID: -1918114669010813020}
   - component: {fileID: 5595495664729428245}
+  - component: {fileID: 6042814297516112189}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -137,7 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 5
   jumpSpeed: 30
-  jumpSFX: {fileID: 5595495664729428245}
 --- !u!70 &4936053696153722601
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5564b34f087740745a6027dc9b583119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyTxt: {fileID: 0}
 --- !u!82 &5595495664729428245
 AudioSource:
   m_ObjectHideFlags: 0
@@ -262,3 +263,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6042814297516112189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936053696153722609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a1547e521337f439b93e6f047c29b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shockedImage: {fileID: -193596219, guid: cb00f57c2f3d0b444b5dcc0a8b9ae82d, type: 3}
+  normalImage: {fileID: 1513430525, guid: 63fe520834378324ca7f182f6a71c5b5, type: 3}
+  stunnedDuration: 2
