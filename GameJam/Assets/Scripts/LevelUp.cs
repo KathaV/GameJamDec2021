@@ -7,11 +7,13 @@ public class LevelUp : MonoBehaviour
 {
     private GameObject msgController;
     private MessageController msgScript;
+    private SoundtrackManager stMnger;
     void Start()
     {
 
         msgController = GameObject.FindGameObjectWithTag("MessageController");
         msgScript = msgController.GetComponent<MessageController>();
+        //stMnger = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SoundtrackManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -23,6 +25,7 @@ public class LevelUp : MonoBehaviour
             if (collectorScript.isFinished())
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                //stMnger.nextLevel();
             }
             // else prompt player to collect all
             else
