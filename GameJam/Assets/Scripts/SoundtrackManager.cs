@@ -8,7 +8,7 @@ public class SoundtrackManager : MonoBehaviour
     public TrackLooper switchTrack;
     private TrackLooper currentTrack;
     private TrackLooper tmp;
-    public float fadeTime = 1f;
+    public float fadeTime = 30f;
     // Start is called before the first frame update
     void Start()
     {

@@ -49,6 +49,8 @@ public class TrackLooper : MonoBehaviour
         //Debug.Log("start volume: " + startVolume);
         while (loopPart.volume > 0)
         {
+
+            //Debug.Log("Decrease by " + (startVolume * Time.deltaTime / FadeTime));
             loopPart.volume -= startVolume * Time.deltaTime / FadeTime;
 
             yield return null;
@@ -62,6 +64,7 @@ public class TrackLooper : MonoBehaviour
         //Debug.Log("start volume: " + startVolume);
         while (loopPart.volume < startVolume)
         {
+            //Debug.Log("Increase by "+ (startVolume * Time.deltaTime / FadeTime));
             loopPart.volume += startVolume * Time.deltaTime / FadeTime;
 
             yield return null;
