@@ -157,6 +157,7 @@ public class Chef : MonoBehaviour
 
             Debug.Log("Done waiting");
             gameOverScreen.SetActive(true);
+            stMnger.GameOver();
             //yield break;
             //.StartCoroutine(GameOver());
         }
