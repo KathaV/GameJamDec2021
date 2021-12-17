@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_ShowDebugText: 0
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
@@ -232,11 +232,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95b99d8eede92234fbabeed4b137053a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   awakeTrack: {fileID: -2487476117631248268}
   switchTrack: {fileID: 5186757692376866906}
-  gameoverTrack: {fileID: 0}
+  gameoverTrack: {fileID: 4716245804770079092}
+  victorySFX: {fileID: 8478104611937386148}
   fadeTime: 0.1
 --- !u!114 &-2487476117631248268
 MonoBehaviour:
@@ -248,8 +249,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca353a3235db4da4ca9d4c2962c08e46, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   loopPart: {fileID: 2545947594877153535}
   introPart: {fileID: 8300000, guid: 98f7c57d6ca9f7e4a9d0f1de0746d88f, type: 3}
   trackName: Normal
@@ -263,8 +264,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca353a3235db4da4ca9d4c2962c08e46, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   loopPart: {fileID: 6553626724659547737}
   introPart: {fileID: 8300000, guid: 5eaee3e5c7575ee4bbb32b3bba27bba4, type: 3}
   trackName: Detecting

@@ -3284,6 +3284,14 @@ PrefabInstance:
       propertyPath: fadeTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1014848642614666400, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+      propertyPath: victorySFX
+      value: 
+      objectReference: {fileID: 1527780714}
+    - target: {fileID: 1014848642614666400, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+      propertyPath: gameoverTrack
+      value: 
+      objectReference: {fileID: 1527780715}
     - target: {fileID: 2545947594877153535, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: Loop
       value: 1
@@ -3292,6 +3300,10 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5186757692376866906, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+      propertyPath: loopPart
+      value: 
+      objectReference: {fileID: 1527780716}
     - target: {fileID: 8611040562084471092, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: m_Name
       value: Main Camera (1)
@@ -3306,7 +3318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8611040562084471240, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1416111
+      value: -4.1266546
       objectReference: {fileID: 0}
     - target: {fileID: 8611040562084471240, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3346,6 +3358,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+--- !u!82 &1527780714 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8478104611937386148, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+  m_PrefabInstance: {fileID: 1527780713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1527780715 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4716245804770079092, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+  m_PrefabInstance: {fileID: 1527780713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1527780716 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6553626724659547737, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+  m_PrefabInstance: {fileID: 1527780713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1541609423
 PrefabInstance:
   m_ObjectHideFlags: 0
