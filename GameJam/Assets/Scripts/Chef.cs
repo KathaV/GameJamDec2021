@@ -44,7 +44,7 @@ public class Chef : MonoBehaviour
         isTurning = false;
         isLooking = false;
         // set green colour (temporary visual cue for chef state change)
-        sprite.color = new Color(0, 1, 0, 1);
+        //sprite.color = new Color(0, 1, 0, 1);
         animator.SetBool("isTurning", isTurning);
         //Debug.Log("Starting at" + Time.realtimeSinceStartup);
 
@@ -70,7 +70,7 @@ public class Chef : MonoBehaviour
         animator.SetBool("isLooking", isLooking);
         animator.SetBool("isTurning", isTurning);
         // set yellow colour (temporary visual cue for chef state change)
-        sprite.color = new Color(1, 1, 0, 1);
+        //sprite.color = new Color(1, 1, 0, 1);
 
         // random offset to change duration slightly
         float offset = TurnDelay / 3;
@@ -112,7 +112,7 @@ public class Chef : MonoBehaviour
 
         animator.SetBool("isLooking", isLooking);
         // set red colour (temporary visual cue for chef state change)
-        sprite.color = new Color(1, 0, 0, 1);
+        //sprite.color = new Color(1, 0, 0, 1);
 
         // random offset to change duration slightly
         float offset = LookDelay / 3;
