@@ -19,7 +19,8 @@ public class Chef : MonoBehaviour
     public AudioSource DetectedSFX;
     public GameObject gameOverScreen;
     private SoundtrackManager stMnger;
-    private 
+    private float detectCountdown;
+
     //for testing only--TO DELETE!!!
     //public GameObject gameOverText;
     // Start is called before the first frame update
@@ -123,35 +124,43 @@ public class Chef : MonoBehaviour
 
         float Timer = LookDelay + randomOff;
         //Debug.Log("Looking at " + Time.realtimeSinceStartup + " for " + Timer);
-
+        detectCountdown = 0;
         // Look for player if visible for duration of Timer
         while (Timer > 0 && !hasDetected)
         {
             // if player is not hidden, chef stops its turning animation and displays gameover text
             if (!playerHideScript.getHidden())
             {
-                // Debug.Log("Chef has seen player!");
-                DetectedSFX.Play();
-                // TODO: Add other actions upon detection here
-                // gameOverText.gameObject.SetActive(true);
-                animator.SetBool("isFound", true);
-                Time.timeScale = 0f;
-                //delay before game over
-                hasDetected = true;
-                //Debug.Log("waiting");
-                //yield return new WaitForSeconds(.1f);
+                detectCountdown += Time.deltaTime;
 
-                //Debug.Log("Done waiting");
+                if (detectCountdown > 0.5)
+                {
+                    detectCountdown = 0;
+                    // Debug.Log("Chef has seen player!");
+                    DetectedSFX.Play();
+                    // TODO: Add other actions upon detection here
+                    // gameOverText.gameObject.SetActive(true);
+                    animator.SetBool("isFound", true);
+                    Time.timeScale = 0f;
+                    //delay before game over
+                    hasDetected = true;
+                    //Debug.Log("waiting");
+                    //yield return new WaitForSeconds(.1f);
 
-                // Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
-                //yield break;
+                    //Debug.Log("Done waiting");
+
+                    // Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
+                    //yield break;
+                }
             }
             else
             {
+                detectCountdown = 0;
                 // else continue looking
                 // Debug.Log("Chef can't see player!");
-                yield return null;
+
             }
+            yield return null;
             Timer -= Time.deltaTime;
         }
         Timer = 10;
