@@ -58,13 +58,15 @@ Will be drawn by Sonia
     * **Yellow** - turning towards/away from player. Potentially, can be a vulnerable stage which player movement can attract looking?
     * **Red** - Danger/Looking. If player is found like this, gameover or whatever
 
-# Mechanics/Physics of Objects and Entities
 
+# Settings, Components, and Scripts per Entity
 ## Player
 Potato which user can control.
 **Requirements**:
 * Must be tagged `Player`
-* Must include Movement and Hideable Scripts
+* Script Components must include: `Movement`, `Hideable`, `Key Collector` and `Stun Player` Scripts
+    * **Key Collector** must have `Text(TMP)` Game Object from _Key UI_ Prefab attached, and the Message Controller prefab GameObject must be included in canvas, with the tag `MessageController`
+    * **Stun Player** must have the normal Potato sprite assigned to the `Normal Image` variable and the shocked potato sprite to the `Shocked Image` variable.
 * Must include RigidBody and 2D Collider
 
 ## Hideable Objects
@@ -74,7 +76,7 @@ Objects which player can hide behind when Chef is looking and avoid detection.
 * Must be tagged `HidingPlace`
 * Player requirements satisfied
 
-
+# Mechanics/Physics of Objects and Entities
 # Movement and Camera
 As developed by Cindy:
 

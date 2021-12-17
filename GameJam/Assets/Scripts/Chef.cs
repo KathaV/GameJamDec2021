@@ -5,10 +5,10 @@ using UnityEngine;
 public class Chef : MonoBehaviour
 {
     public Animator animator;
-    private float idleDelay = 1;
+    public float idleDelay = 8;
 
-    private float LookDelay = 1;
-    private float TurnDelay = 1;
+    public float LookDelay = 4;
+    public float TurnDelay = 3;
     private bool isLooking = false;
     private bool isTurning = false;
     private SpriteRenderer sprite;
@@ -17,13 +17,13 @@ public class Chef : MonoBehaviour
 
     public AudioSource LookAlertSFX;
     public AudioSource DetectedSFX;
-
+    private SoundtrackManager stMnger;
     //for testing only--TO DELETE!!!
     //public GameObject gameOverText;
     // Start is called before the first frame update
     void Start()
     {
-
+        stMnger = GameObject.FindWithTag("MainCamera").GetComponent<SoundtrackManager>();
         sprite = GetComponent<SpriteRenderer>();
         StartCoroutine(LookAway());
         player = GameObject.FindWithTag("Player");
@@ -55,6 +55,7 @@ public class Chef : MonoBehaviour
 
         // Calculate delay to include offset, then wait
         float timeDelay = idleDelay + Random.Range(-offset, offset);
+        Debug.Log("Idle for " + timeDelay);
         yield return new WaitForSeconds(timeDelay);
 
         //Begin to turn towards player
@@ -80,17 +81,24 @@ public class Chef : MonoBehaviour
         // Calculate delay to include offset, then wait
         float timeDelay = TurnDelay + randomOff;
         //Debug.Log("Turning at " + Time.realtimeSinceStartup + " for " + timeDelay);
-        yield return new WaitForSeconds(timeDelay);
+
+        // If turning towards player, switch music to 'detecting' music
+        if (!lookingAway)
+        {
+            stMnger.SwitchTracks();
+        }
+            yield return new WaitForSeconds(timeDelay);
 
         // Depending on if turning towards or away from player, do appropriate action
         if (!lookingAway) {
-            LookAlertSFX.Play();
+            //LookAlertSFX.Play();
             //delay before looking
             yield return new WaitForSeconds(LookAlertSFX.clip.length-0.15f);
             StartCoroutine(Look());
         }
         else
         {
+            stMnger.SwitchTracks();
             StartCoroutine(LookAway());
         }
 
@@ -98,7 +106,6 @@ public class Chef : MonoBehaviour
 
     IEnumerator Look()
     {
-        
         // Set appropriate variables
         isLooking = true;
         isTurning = false;
@@ -118,27 +125,27 @@ public class Chef : MonoBehaviour
         // Look for player if visible for duration of Timer
         while (Timer > 0)
         {
-            //if player is not hidden, chef stops its turning animation and displays gameover text
+            // if player is not hidden, chef stops its turning animation and displays gameover text
             if (!playerHideScript.getHidden())
             {
-                //Debug.Log("Chef has seen player!");
+                // Debug.Log("Chef has seen player!");
                 DetectedSFX.Play();
-                //TODO: Add other actions upon detection here
-                //gameOverText.gameObject.SetActive(true);
+                // TODO: Add other actions upon detection here
+                // gameOverText.gameObject.SetActive(true);
                 animator.SetBool("isFound", true);
-                //Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
+                // Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
                 yield break;
             }
             else
             {
                 // else continue looking
-                //Debug.Log("Chef can't see player!");
+                // Debug.Log("Chef can't see player!");
                 yield return null;
             }
             Timer -= Time.deltaTime;
         }
 
-        //Look away
+        // Look away, change tracks back to 'safe' music
         StartCoroutine(Turn(true));
     }
 

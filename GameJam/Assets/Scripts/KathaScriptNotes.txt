@@ -3,6 +3,9 @@ Player requirements
 - must include Rigidbody2D
 - must include some 2DCollider
 - must include Hideable Script
+- must include KeyCollector script
+    - this script must have Key UI text assigned (the text which shows player how many keys are collected)
+
 
 Hiding Place Object Description
 * Objects which can be used to hide behind chef
@@ -18,4 +21,7 @@ Chef Description:
    * Yellow for Turning
    * Red for Looking
 Requirements:
-- must have gameover text selected as 'Game Over Text' variable (for testing purposes)
+- must have 2 Audio Source components
+   - one component for Look Alert (when it's about to look, ending turn state)
+   - one component for detected audio
+

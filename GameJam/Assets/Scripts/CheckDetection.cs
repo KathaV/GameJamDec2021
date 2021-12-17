@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CheckDetection : MonoBehaviour
 {
     private GameObject player;
@@ -43,7 +44,7 @@ public class CheckDetection : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        //if (other.tag == "Player")
+        if (other.tag == "Player")
         {
             Debug.Log("Player no longer hidden");
             other.gameObject.GetComponent<Hideable>().setHidden(false);
