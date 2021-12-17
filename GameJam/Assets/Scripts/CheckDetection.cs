@@ -32,10 +32,10 @@ public class CheckDetection : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        //Debug.Log("Staying!");
+        Debug.Log("Staying!");
         if (other.tag == "Player")
         {
-            //Debug.Log("Player hidden");
+            Debug.Log("Player hidden");
             other.gameObject.GetComponent<Hideable>().setHidden(true); 
             
 
