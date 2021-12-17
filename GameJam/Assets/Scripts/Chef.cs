@@ -158,7 +158,7 @@ public class Chef : MonoBehaviour
 
         if (hasDetected)
         {
-            Debug.Log("waiting");
+            //Debug.Log("waiting");
             //while (Timer > 0)
             //{
             //    Timer -= Time.deltaTime;
