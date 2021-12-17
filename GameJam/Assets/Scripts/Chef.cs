@@ -163,7 +163,8 @@ public class Chef : MonoBehaviour
             //{
             //    Timer -= Time.deltaTime;
             //    Debug.Log(Time.deltaTime);
-            //    yield return null;
+            //    Debug.Log(Timer);
+            //    //yield return 0;
             //}
             //Debug.Log("done");
             gameOverScreen.SetActive(true);
