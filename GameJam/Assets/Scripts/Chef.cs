@@ -17,6 +17,7 @@ public class Chef : MonoBehaviour
 
     public AudioSource LookAlertSFX;
     public AudioSource DetectedSFX;
+    public GameObject gameOverScreen;
     private SoundtrackManager stMnger;
     //for testing only--TO DELETE!!!
     //public GameObject gameOverText;
@@ -133,6 +134,8 @@ public class Chef : MonoBehaviour
                 // TODO: Add other actions upon detection here
                 // gameOverText.gameObject.SetActive(true);
                 animator.SetBool("isFound", true);
+                Time.timeScale = 0f;
+                gameOverScreen.SetActive(true);
                 // Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
                 yield break;
             }

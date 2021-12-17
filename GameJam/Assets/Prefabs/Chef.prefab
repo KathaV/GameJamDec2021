@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2585382259369010354}
   - component: {fileID: 2585382259369010353}
   - component: {fileID: 2585382259369010352}
+  - component: {fileID: 847398682198913603}
   - component: {fileID: 5108748595206855459}
   - component: {fileID: 7971826059284488357}
   - component: {fileID: -3156387125504994857}
@@ -106,6 +107,19 @@ MonoBehaviour:
   TurnDelay: 3
   LookAlertSFX: {fileID: 7971826059284488357}
   DetectedSFX: {fileID: 5108748595206855459}
+--- !u!114 &847398682198913603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2585382259369010351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d852683f30c20c048985c54bba837825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallexMultiplier: {x: 0.8, y: 0}
 --- !u!82 &5108748595206855459
 AudioSource:
   m_ObjectHideFlags: 0
