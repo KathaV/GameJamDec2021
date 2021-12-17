@@ -92,7 +92,7 @@ public class Chef : MonoBehaviour
 
         // Depending on if turning towards or away from player, do appropriate action
         if (!lookingAway) {
-            //LookAlertSFX.Play();
+            LookAlertSFX.Play();
             //delay before looking
             yield return new WaitForSeconds(LookAlertSFX.clip.length-0.15f);
             StartCoroutine(Look());

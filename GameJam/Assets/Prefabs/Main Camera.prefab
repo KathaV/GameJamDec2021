@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8611040562084471092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 5.849992, y: 0.47171998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66,7 +66,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.45
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -232,8 +232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b99d8eede92234fbabeed4b137053a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  awakeTrack: {fileID: 5186757692376866906}
-  switchTrack: {fileID: -2487476117631248268}
+  awakeTrack: {fileID: -2487476117631248268}
+  switchTrack: {fileID: 5186757692376866906}
+  gameoverTrack: {fileID: 0}
   fadeTime: 0.1
 --- !u!114 &-2487476117631248268
 MonoBehaviour:
