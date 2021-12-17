@@ -6,6 +6,7 @@ public class SoundtrackManager : MonoBehaviour
 {
     public TrackLooper awakeTrack;
     public TrackLooper switchTrack;
+    public TrackLooper gameoverTrack;
     private TrackLooper currentTrack;
     private TrackLooper tmp;
     public float fadeTime = 30f;
@@ -38,5 +39,12 @@ public class SoundtrackManager : MonoBehaviour
         tmp = currentTrack;
         currentTrack = switchTrack;
         switchTrack = tmp;        
+    }
+
+    public void GameOver()
+    {
+        awakeTrack.Stop();
+        switchTrack.Stop();
+        gameoverTrack.Play();
     }
 }

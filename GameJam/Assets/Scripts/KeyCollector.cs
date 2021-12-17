@@ -20,6 +20,7 @@ public class KeyCollector : MonoBehaviour
         fragTotal = fragList.Length;
         msgController = GameObject.FindGameObjectWithTag("MessageController");
         msgController.GetComponent<MessageController>().broadcast("Collect " + fragTotal + " keys to escape!");
+        keyTxt.GetComponent<TextMeshProUGUI>().text = "" + fragCount + "/" + fragTotal;
     }
 
     void OnTriggerEnter2D(Collider2D other)

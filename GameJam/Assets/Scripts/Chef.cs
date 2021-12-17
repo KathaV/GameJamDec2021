@@ -11,10 +11,10 @@ public class Chef : MonoBehaviour
     public float TurnDelay = 3;
     private bool isLooking = false;
     private bool isTurning = false;
+    private bool hasDetected = false;
     private SpriteRenderer sprite;
     private GameObject player;
     private Hideable playerHideScript;
-
     public AudioSource LookAlertSFX;
     public AudioSource DetectedSFX;
     public GameObject gameOverScreen;
@@ -124,7 +124,7 @@ public class Chef : MonoBehaviour
         //Debug.Log("Looking at " + Time.realtimeSinceStartup + " for " + Timer);
 
         // Look for player if visible for duration of Timer
-        while (Timer > 0)
+        while (Timer > 0 && !hasDetected)
         {
             // if player is not hidden, chef stops its turning animation and displays gameover text
             if (!playerHideScript.getHidden())
@@ -135,9 +135,11 @@ public class Chef : MonoBehaviour
                 // gameOverText.gameObject.SetActive(true);
                 animator.SetBool("isFound", true);
                 Time.timeScale = 0f;
-                gameOverScreen.SetActive(true);
+                //delay before game over
+                hasDetected = true;
+                break;
                 // Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
-                yield break;
+                //yield break;
             }
             else
             {
@@ -148,9 +150,26 @@ public class Chef : MonoBehaviour
             Timer -= Time.deltaTime;
         }
 
+        if (hasDetected)
+        {
+            Debug.Log("waiting");
+            //yield return new WaitForSeconds(1f);
+
+            Debug.Log("Done waiting");
+            gameOverScreen.SetActive(true);
+            //yield break;
+            //.StartCoroutine(GameOver());
+        }
+        else
+        {
+            StartCoroutine(Turn(true));
+        }
+        
         // Look away, change tracks back to 'safe' music
-        StartCoroutine(Turn(true));
+            
     }
+
+    
 
 
     bool getIsTurning()
