@@ -6,7 +6,8 @@ public class SoundtrackManager : MonoBehaviour
 {
     public TrackLooper awakeTrack;
     public TrackLooper switchTrack;
-    public TrackLooper gameoverTrack;
+    public AudioSource gameoverTrack;
+    public AudioSource victorySFX;
     private TrackLooper currentTrack;
     private TrackLooper tmp;
     public float fadeTime = 30f;
@@ -45,6 +46,13 @@ public class SoundtrackManager : MonoBehaviour
     {
         awakeTrack.Stop();
         switchTrack.Stop();
+        currentTrack.Stop();
         gameoverTrack.Play();
+    }
+
+    public void nextLevel()
+    {
+        Debug.Log("Playing achieve sfx");
+        victorySFX.Play();
     }
 }
