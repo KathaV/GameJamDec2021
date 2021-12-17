@@ -9,15 +9,16 @@ public class Movement : MonoBehaviour
     public float playerSpeed = 5f;
     public float jumpSpeed = 30f;
     private bool isJump = false;
-    //public AudioSource jumpSFX;
+    public float gravityScale = 15f;
+    private AudioSource jumpSFX;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = transform.GetComponent<Rigidbody2D>();
         // default values
-        rb.gravityScale = 15f;
-
+        rb.gravityScale = gravityScale;
+        jumpSFX = GetComponent<AudioSource>();
         
     }
 
@@ -40,7 +41,7 @@ public class Movement : MonoBehaviour
         {   
             rb.velocity = Vector2.up * jumpSpeed;
             isJump = true;
-            //jumpSFX.Play();
+            jumpSFX.Play();
         }
     }
 
