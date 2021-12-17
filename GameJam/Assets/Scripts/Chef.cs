@@ -19,6 +19,7 @@ public class Chef : MonoBehaviour
     public AudioSource DetectedSFX;
     public GameObject gameOverScreen;
     private SoundtrackManager stMnger;
+    private 
     //for testing only--TO DELETE!!!
     //public GameObject gameOverText;
     // Start is called before the first frame update
@@ -137,7 +138,11 @@ public class Chef : MonoBehaviour
                 Time.timeScale = 0f;
                 //delay before game over
                 hasDetected = true;
-                break;
+                //Debug.Log("waiting");
+                //yield return new WaitForSeconds(.1f);
+
+                //Debug.Log("Done waiting");
+
                 // Optional: Add 'StartCoroutine(Turn(true));' if chef should continue 
                 //yield break;
             }
@@ -149,13 +154,18 @@ public class Chef : MonoBehaviour
             }
             Timer -= Time.deltaTime;
         }
+        Timer = 10;
 
         if (hasDetected)
         {
             Debug.Log("waiting");
-            //yield return new WaitForSeconds(1f);
-
-            Debug.Log("Done waiting");
+            //while (Timer > 0)
+            //{
+            //    Timer -= Time.deltaTime;
+            //    Debug.Log(Time.deltaTime);
+            //    yield return null;
+            //}
+            //Debug.Log("done");
             gameOverScreen.SetActive(true);
             stMnger.GameOver();
             //yield break;

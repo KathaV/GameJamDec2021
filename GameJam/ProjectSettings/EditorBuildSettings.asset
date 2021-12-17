@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/martinLevel4.unity
     guid: 1415c414acec7cf48927af6a9e0a311d
+  - enabled: 1
+    path: Assets/Scenes/VictoryScene.unity
+    guid: edbb068eb32b131449f25bde551b4776
   m_configObjects: {}
