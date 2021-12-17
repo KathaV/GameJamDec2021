@@ -3364,7 +3364,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1014848642614666400, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: fadeTime
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1014848642614666400, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: victorySFX
@@ -3379,6 +3379,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2545947594877153535, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716245804770079092, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478104611937386148, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}

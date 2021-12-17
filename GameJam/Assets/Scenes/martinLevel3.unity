@@ -261,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 518944730}
     - target: {fileID: 636928164370144683, guid: acfe1091c83fbb9429470feec736c3db, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 2.0041323
+      value: 2.7252336
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acfe1091c83fbb9429470feec736c3db, type: 3}
@@ -1401,7 +1401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6009304933544378884, guid: bb2e7290e3025b248b7b6ca09eb5acc2, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6009304933544378884, guid: bb2e7290e3025b248b7b6ca09eb5acc2, type: 3}
       propertyPath: m_LocalScale.x
@@ -1417,7 +1417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6009304933544378884, guid: bb2e7290e3025b248b7b6ca09eb5acc2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.750002
+      value: 30.821
       objectReference: {fileID: 0}
     - target: {fileID: 6009304933544378884, guid: bb2e7290e3025b248b7b6ca09eb5acc2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1456,8 +1456,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8945901851800812980, guid: bb2e7290e3025b248b7b6ca09eb5acc2, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6603894
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945901851800812980, guid: bb2e7290e3025b248b7b6ca09eb5acc2, type: 3}
       propertyPath: m_Size.y
       value: 5.2801137
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945901851800812980, guid: bb2e7290e3025b248b7b6ca09eb5acc2, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.19125915
       objectReference: {fileID: 0}
     - target: {fileID: 8945901851800812980, guid: bb2e7290e3025b248b7b6ca09eb5acc2, type: 3}
       propertyPath: m_Offset.y
@@ -3286,7 +3294,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1014848642614666400, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: fadeTime
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1014848642614666400, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: victorySFX
@@ -3304,10 +3312,18 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4716245804770079092, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5186757692376866906, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: loopPart
       value: 
       objectReference: {fileID: 1527780716}
+    - target: {fileID: 8478104611937386148, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8611040562084471092, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: m_Name
       value: Main Camera (1)
