@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     public float jumpSpeed = 30f;
     private bool isJump = false;
     public float gravityScale = 15f;
-    private AudioSource jumpSFX;
+    public AudioSource jumpSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
         rb = transform.GetComponent<Rigidbody2D>();
         // default values
         rb.gravityScale = gravityScale;
-        jumpSFX = GetComponent<AudioSource>();
+        //jumpSFX = GetComponent<AudioSource>();
         
     }
 

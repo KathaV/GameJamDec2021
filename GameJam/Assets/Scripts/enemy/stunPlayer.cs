@@ -7,6 +7,7 @@ public class stunPlayer : MonoBehaviour
 
     [SerializeField] Sprite shockedImage;
     [SerializeField] Sprite normalImage;
+    [SerializeField] AudioSource stunSFX;
 
 
     [SerializeField] private float stunnedDuration;
@@ -31,7 +32,7 @@ public class stunPlayer : MonoBehaviour
         GetComponent<Movement>().enabled = false;
 
         GetComponent<SpriteRenderer>().sprite = shockedImage;
-
+        stunSFX.Play();
         yield return new WaitForSeconds(stunnedDuration);
 
         GetComponent<Movement>().enabled = true;
