@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3368987025126282934}
   - component: {fileID: 8945901851800812980}
   - component: {fileID: 2171270127984978745}
+  - component: {fileID: 1311159650495130875}
+  - component: {fileID: 7113711663385446831}
   m_Layer: 0
   m_Name: Red Jar
   m_TagString: HidingPlace
@@ -124,3 +126,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284082a1232c574438aafe3b41e74cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!251 &1311159650495130875
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481573096360243096}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!61 &7113711663385446831
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481573096360243096}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01804161, y: 3.2131343}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.88, y: 8.226666}
+    newSize: {x: 4.88, y: 8.226666}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.3387566, y: 1.3655176}
+  m_EdgeRadius: 0
