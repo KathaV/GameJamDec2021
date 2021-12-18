@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852683f30c20c048985c54bba837825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallexMultiplier: {x: 1, y: 0}
+  parallexMultiplier: {x: 1, y: 0.5}
 --- !u!1001 &412376374
 PrefabInstance:
   m_ObjectHideFlags: 0
