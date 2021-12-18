@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852683f30c20c048985c54bba837825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallexMultiplier: {x: 1, y: 0}
+  parallexMultiplier: {x: 1, y: 0.5}
 --- !u!1001 &412376374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2027,7 +2027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8611040562084471240, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0818381
+      value: -2.0708146
       objectReference: {fileID: 0}
     - target: {fileID: 8611040562084471240, guid: 65ef46c6d00335f4491cfd5e2c65575e, type: 3}
       propertyPath: m_LocalPosition.y
