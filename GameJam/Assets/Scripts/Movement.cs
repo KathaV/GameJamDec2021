@@ -49,9 +49,10 @@ public class Movement : MonoBehaviour
     // maybe should be moved to player attribute?????????????
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.contacts.Length > 0 && collision.gameObject.tag == "Platform" || collision.gameObject.tag == "HidingPlace")
+        if (collision.contacts.Length > 0 && (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "HidingPlace"))
         {
             float normal = collision.contacts[0].normal.y;
+            Debug.Log(normal);
             if (normal > 0.99)
             {
                 //collision was from below
