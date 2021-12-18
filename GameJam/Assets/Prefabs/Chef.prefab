@@ -107,6 +107,7 @@ MonoBehaviour:
   TurnDelay: 3
   LookAlertSFX: {fileID: 7971826059284488357}
   DetectedSFX: {fileID: 5108748595206855459}
+  gameOverScreen: {fileID: 0}
 --- !u!114 &847398682198913603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d852683f30c20c048985c54bba837825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallexMultiplier: {x: 0.8, y: 0}
+  parallexMultiplier: {x: 1, y: 0}
 --- !u!82 &5108748595206855459
 AudioSource:
   m_ObjectHideFlags: 0
